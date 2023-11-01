@@ -1,0 +1,47 @@
+welcome to react class 
+
+1.createRoot : 
+
+createRoot used to render the specific container of HTML tag in inside of that.
+
+let container = document.getElementById("root") // root  is the index.html's one of the  div id
+let root = ReactDOM.createRoot(container)
+root.render(<h1>Hi, helloworld!</h1>) // in the render refers to the renderer of the page (browser).
+
+2.Components :
+
+It is basically diving the page into multiple pieces like header, content body and footer.
+
+1 st need to create a new folder in same project folder and adding new files in the extensions of .jsx(javascript eXtensible)
+
+importing name 1st letter should be in the upperCase and needs to be mention right file path needs to be mention in from afterwords.
+
+3.jsx :
+
+*note : while using the jsx file, if u want to add the css property in the element need to mention "className" instead of "class" not like we used in the html file.
+
+we can do js expression inbetween the html tags in the jsx  file by using the { } curly brackets.
+
+ex: { 2+2 } if we pass the null value it doest render any of the contet.
+
+4.Condional formatting :
+
+in jsx we can short  circuit the conditions like console.log(false && true) it logs the falsy value. if it is true it will logs the last truthy value.
+
+5.props :
+
+props is the inbuild Components in the react. It helps us to pass the values dynaamically in the one jsx file to the main jsx file attached in the index.js file.
+
+ex : 
+ 
+ under custom Components new file 
+
+ write a function custom(props){
+  return <h1> Hi, I'm {props.name}</h1> //--- jsx js expression {props.name}
+}
+
+And this props is basically a set of obj which is stored the data as key value pairs.
+
+in main jsx file need to  mention the props key as <Content name="Starc Lee" /> //--- we can also set the name from the {js expression} by use this
+
+
