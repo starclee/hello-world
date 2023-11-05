@@ -10,11 +10,11 @@ root.render(<h1>Hi, helloworld!</h1>) // in the render refers to the renderer of
 
 2.Components :
 
-It is basically diving the page into multiple pieces like header, content body and footer.
+It is basically dividing the page into multiple pieces like header, content body and footer.
 
-1 st need to create a new folder in same project folder and adding new files in the extensions of .jsx(javascript eXtensible)
+1 st need to create a new folder in same project folder under src and adding new files in the extensions of .jsx(javascript eXtensible)
 
-importing name 1st letter should be in the upperCase and needs to be mention right file path needs to be mention in from afterwords.
+importing "name" 1st letter should be in the upperCase and needs to be mention right file path needs to be mention in "from" afterwords.
 
 3.jsx :
 
@@ -22,7 +22,7 @@ importing name 1st letter should be in the upperCase and needs to be mention rig
 
 we can do js expression inbetween the html tags in the jsx  file by using the { } curly brackets.
 
-ex: { 2+2 } if we pass the null value it doest render any of the contet.
+ex: { 2+2 } if we pass the null value it doesn't render any of the content.
 
 4.Condional formatting :
 
@@ -30,11 +30,11 @@ in jsx we can short  circuit the conditions like console.log(false && true) it l
 
 5.props :
 
-props is the inbuild Components in the react. It helps us to pass the values dynaamically in the one jsx file to the main jsx file attached in the index.js file.
+props is the in-build Components in the react. It helps us to pass the values dynamically in the one jsx file to the main jsx file attached in the index.js file.
 
 ex : 
  
- under custom Components new file 
+ under custom "Components" new file 
 
  write a function custom(props){
   return <h1> Hi, I'm {props.name}</h1> //--- jsx js expression {props.name}
@@ -42,6 +42,46 @@ ex :
 
 And this props is basically a set of obj which is stored the data as key value pairs.
 
-in main jsx file need to  mention the props key as <Content name="Starc Lee" /> //--- we can also set the name from the {js expression} by use this
+in main jsx file need to mention the props key as <Content name="Starc Lee"/>
+  //--- we can also set the name from the {js expression} by use this
+
+6. eventListener : 
+
+eventListener is a function which is called whatever the event needs to be take  placa in the certain tag. 
+
+ex. let i = 1
+function btn(){
+  console.log("Hi...There...."+i)
+  i++
+}
+
+takes place inside the exporting function html tag :
+
+"<button onClick={btn}>Click here</button> "
+
+// btn is a function which is returning the value or  console message whatever we need to present there.
+
+in "onClick" needs to mention whaterver the event needs to be happend in the eventListener clearly mention that in the Caps after the "on"-"Click"
+
+7.useState :
+
+it's nothing but the react stores the past state  of values using the in-build function od useState.
+
+whenever using useState react app function name will be Caps.
+
+ex. function App(){
+   // for state variables must use const, it's not updated, it's again created.
+  const [counter,setCounter] = useState(100)
+    function use(){
+      setCounter(2)
+    }
+  return <div>
+    <Header />
+    <Custom name= {`${"Starc Lee "+counter}`} />
+    <button onClick={use}>Click here</button>
+    
+  </div>
+} 
+
 
 

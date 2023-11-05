@@ -1,13 +1,19 @@
-import React from "react";
-import Content from './custom.jsx';
+import React, { useState } from "react";
+import Custom from './custom.jsx';
 import Header from './header.jsx';
 
-function app(){
+
+function App(){
+  const [counter,setCounter] = useState(100)
+    function use(){
+      setCounter(200)
+    }
   return <div>
-    <Header />
-    <Content name="Starc Lee" />
+    <Header  />
+    <Custom name= {`${"Starc Lee "+counter}`} />
+    <button onClick={use}>Click here</button>
     
   </div>
 }
 
-export default  app;
+export default  App;
