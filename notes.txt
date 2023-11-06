@@ -47,7 +47,7 @@ in main jsx file need to mention the props key as <Content name="Starc Lee"/>
 
 6. eventListener : 
 
-eventListener is a function which is called whatever the event needs to be take  placa in the certain tag. 
+eventListener is a function which is called whatever the event needs to be take  place in the certain tag. 
 
 ex. let i = 1
 function btn(){
@@ -63,9 +63,9 @@ takes place inside the exporting function html tag :
 
 in "onClick" needs to mention whaterver the event needs to be happend in the eventListener clearly mention that in the Caps after the "on"-"Click"
 
-7.useState :
+7.useState : hook function
 
-it's nothing but the react stores the past state  of values using the in-build function od useState.
+it's nothing but the react stores the past state  of values using the in-build function of useState.
 
 whenever using useState react app function name will be Caps.
 
@@ -82,6 +82,63 @@ ex. function App(){
     
   </div>
 } 
+
+
+if setCounter({value==="function"}) ? setCounter(function(oldValue)) : setCounter(value)
+
+if new value depends on the older value use the functional updatation method to update new value.
+
+ex. setCounter(oldvalue => oldValue + 1)
+
+8. useState functional update & random quote generator example:
+
+helps to  regain the  useState hook
+
+9. useEffect :
+
+it's an side effect of the  useState hook. It's actually render the values whatever we needs to be done inside the useEffect hook. it has two part. one is anonymous function and the other is dependancy array.
+
+ex. useEffect((){
+console.log("Hi...")
+},[])
+
+if we won't give the counter inside the dependancy array, it will be console log the value what we have logged inside the anonymous function. whenever we use the setCounter it doesn't take care of that. if incase we gave the counter inside the dependancy array it will always render's the value whenever call the setCounter.
+
+  useEffect(() => {
+    console.log(counter);
+  }, [counter]);
+
+
+10. todo app creation : 
+
+store value in the input field using value parameter in the input tag.
+using onChange event to store value in the initial value of useState. and push it into the array of string values. and then show that in the dom render.
+
+ex. onChange(event=>setTask(event.target.value))
+
+for enter key value pushing that while check the onKeyDown event has some kind of in-build properties has to be given. so we can check the keyCode===13 means we can push the typed value into the list of item we have to shown in the dom.
+
+if in case we can go with older method which is already in html using "form".
+
+in form needs to be one button must be present to perform the add the details into the places wherever we need that in the dom.
+
+while doing that button type must be in "submit" and we can skip the button onClick event & onKeyDown event. the worst case is form having the default behaviour of the refresh the page and do the onclick which is what we have done in previously. 
+
+we can also prevent that using "event.preventDefult()" in pushing function. we can mention that function in the form's onSubmit event.
+
+ex. <form onSubmit={function} /> .
+
+it will be more efficient in preformation based and pretty much less js codes.
+
+
+
+
+
+
+
+
+
+
 
 
 
