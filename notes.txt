@@ -118,6 +118,12 @@ ex. onChange(event=>setTask(event.target.value))
 
 for enter key value pushing that while check the onKeyDown event has some kind of in-build properties has to be given. so we can check the keyCode===13 means we can push the typed value into the list of item we have to shown in the dom.
 
+ex.  onKeyDown={(event) => {
+     if (event["keyCode"] === 13) {
+        buttonClick();
+      }
+    }}
+
 if in case we can go with older method which is already in html using "form".
 
 in form needs to be one button must be present to perform the add the details into the places wherever we need that in the dom.
