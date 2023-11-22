@@ -111,6 +111,8 @@ if we won't give the counter inside the dependancy array, it will be console log
 
 10. todo app creation : 
 
+10.1. Add Todo List
+
 store value in the input field using value parameter in the input tag.
 using onChange event to store value in the initial value of useState. and push it into the array of string values. and then show that in the dom render.
 
@@ -135,6 +137,10 @@ we can also prevent that using "event.preventDefult()" in pushing function. we c
 ex. <form onSubmit={function} /> .
 
 it will be more efficient in preformation based and pretty much less js codes.
+
+10.2. delete Todo Item : 
+
+deletion done by using the id of the Todo. and it has been generated uniquely. 
 
 
 
