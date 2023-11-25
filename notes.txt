@@ -142,6 +142,94 @@ it will be more efficient in preformation based and pretty much less js codes.
 
 deletion done by using the id of the Todo. and it has been generated uniquely. 
 
+11 . routing intro : 
+
+routing in the react requires the react-router-dom package.
+
+then the dom has the two things : BrowserRouter and Route 
+
+the BrowserRouter needs to be parent element in the return part of the App.jsx file
+Route used to mention the Route path.
+
+ex:  <BrowserRouter>
+      <Route path="/counter">
+        <div></div>
+      </Route>
+    </BrowserRouter>
+
+    according to to the React v6 Route needs to be wrap up within the Routes.
+    Additionally, Route has to props: path and element 
+
+    path will be the routing path of the page & element will be render the content what we have needs to be render in the given path.
+
+    revised ex:
+
+     <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/counter" element={<h1>Hii, Counter</h1>} />
+        </Routes>
+      </BrowserRouter>
+      <h2>Hii, Hello</h2>
+    </div>
+
+
+    it's not gonna help u to redirect the page because it requires the index.html page needs to be link to that page. so we import Link too.  
+
+    ex: 
+     <BrowserRouter>
+        <Link to="/counter">One</Link> -- needs to be close.
+        
+        inside the BrowserRouter tag need to be mention the path inside the link tag.
+  
+  12. exact route match : 
+
+  put the exact attribute in the Route tag after the  path.
+
+  ex:<Route
+        path="/counter"
+        exact={true} />
+
+  13. dynamic routes : 
+
+  for dynamic route, we can do that with the help of useParams hook in the react.
+
+  ex: const { userName } = useParams(); -- it can be defined in the Components fucn.
+
+  <Route path="/user/:id" element={<UserProfile />} />
+
+In React Router, useParams() is a hook used to access the parameters (or route match parameters) from the current route. When a URL contains dynamic segments defined by :paramName in the route path, useParams() allows you to access the values of these parameters.
+
+ 14. http requests in react:
+ ex: used in the user Component file.
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("/users.json"); // Fetch from the public folder
+        const data = await response.json(); // Parse JSON data
+        setUserData(data[userName]); // Set the data in state
+      } catch (error) {
+        console.error("Error fetching JSON:", error);
+      }
+    }
+    fetchData();
+  }, [userName]);
+
+  received json data displayed like this,
+
+  ex:
+   <div>
+      <h1>My name is {userData?.name}</h1>
+      <li>Name : {userData?.name}</li>
+      <li>age : {userData?.age}</li>
+    </div>
+
+
+
+
+
+
+
 
 
 
